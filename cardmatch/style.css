@@ -1,0 +1,41 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;               
+    align-items: flex-start;
+    gap: 2%;                       
+    padding: 0.2%;
+    background-color: white;       
+}
+
+.card {
+    background-color: gainsboro;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(22% - 8%);         
+    height: 80px;                  
+    padding: 10px;                 
+    margin-bottom: 20px;           
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;           /* Make text invisible initially */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.card.flipped {
+    background-color: #fff;        /* Change background color when flipped */
+    color: black;                  /* Make the text visible when flipped */
+    transform: scale(1.05);        /* Slightly enlarge the card when flipped */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow when flipped */
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(120, 119, 119, 0.2);
+}
